@@ -1,0 +1,362 @@
+[
+  {
+    "name": "abathur",
+    "role": "support"
+  },
+  {
+    "name": "alarak",
+    "role": "melee-assassin"
+  },
+  {
+    "name": "alexstrasza",
+    "role": "healer"
+  },
+  {
+    "name": "ana",
+    "role": "healer"
+  },
+  {
+    "name": "anduin",
+    "role": "healer"
+  },
+  {
+    "name": "anubarak",
+    "role": "tank"
+  },
+  {
+    "name": "artanis",
+    "role": "bruiser"
+  },
+  {
+    "name": "arthas",
+    "role": "tank"
+  },
+  {
+    "name": "auriel",
+    "role": "healer"
+  },
+  {
+    "name": "azmodan",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "blaze",
+    "role": "tank"
+  },
+  {
+    "name": "brightwing",
+    "role": "healer"
+  },
+  {
+    "name": "cassia",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "chen",
+    "role": "bruiser"
+  },
+  {
+    "name": "cho",
+    "role": "tank"
+  },
+  {
+    "name": "chromie",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "deathwing",
+    "role": "bruiser"
+  },
+  {
+    "name": "deckard",
+    "role": "healer"
+  },
+  {
+    "name": "dehaka",
+    "role": "bruiser"
+  },
+  {
+    "name": "diablo",
+    "role": "tank"
+  },
+  {
+    "name": "dva",
+    "role": "bruiser"
+  },
+  {
+    "name": "etc",
+    "role": "tank"
+  },
+  {
+    "name": "falstad",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "fenix",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "gall",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "garrosh",
+    "role": "tank"
+  },
+  {
+    "name": "gazlowe",
+    "role": "bruiser"
+  },
+  {
+    "name": "genji",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "greymane",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "guldan",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "hanzo",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "hogger",
+    "role": "bruiser"
+  },
+  {
+    "name": "illidan",
+    "role": "melee-assassin"
+  },
+  {
+    "name": "imperius",
+    "role": "bruiser"
+  },
+  {
+    "name": "jaina",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "johanna",
+    "role": "tank"
+  },
+  {
+    "name": "junkrat",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "kaelthas",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "kelthuzad",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "kerrigan",
+    "role": "melee-assassin"
+  },
+  {
+    "name": "kharazim",
+    "role": "healer"
+  },
+  {
+    "name": "leoric",
+    "role": "bruiser"
+  },
+  {
+    "name": "li-li",
+    "role": "healer"
+  },
+  {
+    "name": "li-ming",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "lt-morales",
+    "role": "healer"
+  },
+  {
+    "name": "lucio",
+    "role": "healer"
+  },
+  {
+    "name": "lunara",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "maiev",
+    "role": "melee-assassin"
+  },
+  {
+    "name": "malfurion",
+    "role": "healer"
+  },
+  {
+    "name": "malganis",
+    "role": "tank"
+  },
+  {
+    "name": "malthael",
+    "role": "bruiser"
+  },
+  {
+    "name": "medivh",
+    "role": "support"
+  },
+  {
+    "name": "mei",
+    "role": "tank"
+  },
+  {
+    "name": "mephisto",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "muradin",
+    "role": "tank"
+  },
+  {
+    "name": "murky",
+    "role": "melee-assassin"
+  },
+  {
+    "name": "nazeebo",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "nova",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "orphea",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "probius",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "qhira",
+    "role": "melee-assassin"
+  },
+  {
+    "name": "ragnaros",
+    "role": "bruiser"
+  },
+  {
+    "name": "raynor",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "rehgar",
+    "role": "healer"
+  },
+  {
+    "name": "rexxar",
+    "role": "bruiser"
+  },
+  {
+    "name": "samuro",
+    "role": "melee-assassin"
+  },
+  {
+    "name": "sgt-hammer",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "sonya",
+    "role": "bruiser"
+  },
+  {
+    "name": "stitches",
+    "role": "tank"
+  },
+  {
+    "name": "stukov",
+    "role": "healer"
+  },
+  {
+    "name": "sylvanas",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "tassadar",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "the-butcher",
+    "role": "melee-assassin"
+  },
+  {
+    "name": "the-lost-vikings",
+    "role": "support"
+  },
+  {
+    "name": "thrall",
+    "role": "bruiser"
+  },
+  {
+    "name": "tracer",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "tychus",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "tyrael",
+    "role": "tank"
+  },
+  {
+    "name": "tyrande",
+    "role": "healer"
+  },
+  {
+    "name": "uther",
+    "role": "healer"
+  },
+  {
+    "name": "valeera",
+    "role": "melee-assassin"
+  },
+  {
+    "name": "valla",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "varian",
+    "role": "bruiser"
+  },
+  {
+    "name": "whitemane",
+    "role": "healer"
+  },
+  {
+    "name": "xul",
+    "role": "bruiser"
+  },
+  {
+    "name": "yrel",
+    "role": "bruiser"
+  },
+  {
+    "name": "zagara",
+    "role": "ranged-assassin"
+  },
+  {
+    "name": "zarya",
+    "role": "support"
+  },
+  {
+    "name": "zeratul",
+    "role": "melee-assassin"
+  },
+  {
+    "name": "zuljin",
+    "role": "ranged-assassin"
+  }
+]

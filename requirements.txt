@@ -1,0 +1,4 @@
+streamlit==1.28.2
+pydantic==2.5.2
+streamlit-keyup==0.2.2
+heroprotocol
