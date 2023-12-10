@@ -5,3 +5,4 @@ from app.heroes import (
     clean_hero_name,
     extract_heroes_from_replay,
 )
+from app.match_series_interface import MatchSeriesManager
