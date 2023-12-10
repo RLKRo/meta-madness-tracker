@@ -1,6 +1,4 @@
 from itertools import islice
-import json
-import re
 
 import streamlit as st
 from st_keyup import st_keyup
@@ -22,24 +20,28 @@ if "banned" not in st.session_state:
 def batched(iterable, n):
     # batched('ABCDEFG', 3) --> ABC DEF G
     if n < 1:
-        raise ValueError('n must be at least one')
+        raise ValueError("n must be at least one")
     it = iter(iterable)
     while batch := tuple(islice(it, n)):
         yield batch
 
 
-pattern = r'[^A-Za-z0-9]+'
+pattern = r"[^A-Za-z0-9]+"
 
 
 def image_with_tooltip(img, tooltip, ban):
     # Define the html for each image
-    ban_image = '<img class= "image ban" src="app/static/ban.png" alt="ban image">' if ban else ''
+    ban_image = (
+        '<img class= "image ban" src="app/static/ban.png" alt="ban image">'
+        if ban
+        else ""
+    )
 
     image_hover = (
         '<div class="hoverable">'
-        f'<img class="image" src="{img}" alt="{tooltip}">' +
-        ban_image +
-        f'<div class="tooltip">{tooltip.replace("-", " ")}</div>'
+        f'<img class="image" src="{img}" alt="{tooltip}">'
+        + ban_image
+        + f'<div class="tooltip">{tooltip.replace("-", " ")}</div>'
         '</div>'
     )
 
@@ -59,10 +61,7 @@ with filters[0]:
         display_cross_over_banned = st.checkbox("Cross out banned heroes", value=False)
 
 with filters[1]:
-    role_filter = st.multiselect(
-        "Filter by role",
-        HERO_ROLES
-    )
+    role_filter = st.multiselect("Filter by role", HERO_ROLES)
 
     image_width = st.slider("Image width", min_value=60, max_value=152, value=90)
     # image_width = 90
@@ -77,7 +76,9 @@ sidebar.title("Configuration")
 
 hide_filters = sidebar.checkbox("Hide filters", value=False)
 
-st.session_state["banned"] = sidebar.text_area("Banned heroes", height=400, value=st.session_state["banned"])
+st.session_state["banned"] = sidebar.text_area(
+    "Banned heroes", height=400, value=st.session_state["banned"]
+)
 form = sidebar.form("upload_form", clear_on_submit=True)
 
 
@@ -92,12 +93,19 @@ def process_uploaded_files():
 
 
 form.file_uploader(
-    "Upload replay(s) to ban heroes", accept_multiple_files=True, type="StormReplay", key="file_uploader"
+    "Upload replay(s) to ban heroes",
+    accept_multiple_files=True,
+    type="StormReplay",
+    key="file_uploader",
 )
 form.form_submit_button("Submit", on_click=process_uploaded_files)
 
 
-banned_heroes = set(line for line in map(clean_hero_name, st.session_state["banned"].split("\n")) if line and line in HEROES_DICT)
+banned_heroes = set(
+    line
+    for line in map(clean_hero_name, st.session_state["banned"].split("\n"))
+    if line and line in HEROES_DICT
+)
 
 if "cho" in banned_heroes or "gall" in banned_heroes:
     banned_heroes.add("cho")
@@ -108,15 +116,18 @@ def display_heroes():
     html_image_list = '<div class="heroes">'
     for hero_name, hero in HEROES_DICT.items():
         clean_filter = clean_hero_name(name_filter)
-        if role_filter and hero['role'] not in role_filter:
+        if role_filter and hero["role"] not in role_filter:
             continue
         if ban_filter == "Banned Only" and hero_name not in banned_heroes:
             continue
         if ban_filter == "Available Only" and hero_name in banned_heroes:
             continue
         if name_filter and not (
-                hero_name.startswith(clean_filter) or  # catches 'azmo' in 'azmodan'
-                any(name_part.startswith(clean_filter) for name_part in hero['name'].split('-'))  # catches 'ham' in 'sgt-hammer'
+            hero_name.startswith(clean_filter)  # catches 'azmo' in 'azmodan'
+            or any(
+                name_part.startswith(clean_filter)
+                for name_part in hero["name"].split("-")
+            )  # catches 'ham' in 'sgt-hammer'
         ):
             continue
 
@@ -125,11 +136,9 @@ def display_heroes():
             add_cross = False
 
         html_image_list += image_with_tooltip(
-            f"app/static/{hero['name']}.png",
-            hero['name'],
-            add_cross
+            f"app/static/{hero['name']}.png", hero["name"], add_cross
         )
-    html_image_list += f"</div>"
+    html_image_list += "</div>"
 
     st.write(html_image_list, unsafe_allow_html=True)
 
@@ -141,7 +150,7 @@ hide_filters_style = """div[data-testid="stHorizontalBlock"]{
     display: none;
 }"""
 
-style = f'''
+style = f"""
 <style>
 button[title="View fullscreen"]{{
     visibility: hidden;
@@ -193,6 +202,6 @@ h1 {{
     opacity: 1;
 }}
 </style>
-'''
+"""
 
 st.write(style, unsafe_allow_html=True)
