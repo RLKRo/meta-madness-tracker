@@ -1,0 +1,452 @@
+{
+  "abathur": {
+    "name": "abathur",
+    "role": "support",
+    "player_spawned_name": "HeroAbathur"
+  },
+  "alarak": {
+    "name": "alarak",
+    "role": "melee-assassin",
+    "player_spawned_name": "HeroAlarak"
+  },
+  "alexstrasza": {
+    "name": "alexstrasza",
+    "role": "healer",
+    "player_spawned_name": "HeroAlexstrasza"
+  },
+  "ana": {
+    "name": "ana",
+    "role": "healer",
+    "player_spawned_name": "HeroAna"
+  },
+  "anduin": {
+    "name": "anduin",
+    "role": "healer",
+    "player_spawned_name": "HeroAnduin"
+  },
+  "anubarak": {
+    "name": "anubarak",
+    "role": "tank",
+    "player_spawned_name": "HeroAnubarak"
+  },
+  "artanis": {
+    "name": "artanis",
+    "role": "bruiser",
+    "player_spawned_name": "HeroArtanis"
+  },
+  "arthas": {
+    "name": "arthas",
+    "role": "tank",
+    "player_spawned_name": "HeroArthas"
+  },
+  "auriel": {
+    "name": "auriel",
+    "role": "healer",
+    "player_spawned_name": "HeroAuriel"
+  },
+  "azmodan": {
+    "name": "azmodan",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroAzmodan"
+  },
+  "blaze": {
+    "name": "blaze",
+    "role": "tank",
+    "player_spawned_name": "HeroFirebat"
+  },
+  "brightwing": {
+    "name": "brightwing",
+    "role": "healer",
+    "player_spawned_name": "HeroFaerieDragon"
+  },
+  "cassia": {
+    "name": "cassia",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroAmazon"
+  },
+  "chen": {
+    "name": "chen",
+    "role": "bruiser",
+    "player_spawned_name": "HeroChen"
+  },
+  "cho": {
+    "name": "cho",
+    "role": "tank",
+    "player_spawned_name": "HeroCho"
+  },
+  "chromie": {
+    "name": "chromie",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroChromie"
+  },
+  "deathwing": {
+    "name": "deathwing",
+    "role": "bruiser",
+    "player_spawned_name": "HeroDeathwing"
+  },
+  "deckard": {
+    "name": "deckard",
+    "role": "healer",
+    "player_spawned_name": "HeroDeckard"
+  },
+  "dehaka": {
+    "name": "dehaka",
+    "role": "bruiser",
+    "player_spawned_name": "HeroDehaka"
+  },
+  "diablo": {
+    "name": "diablo",
+    "role": "tank",
+    "player_spawned_name": "HeroDiablo"
+  },
+  "dva": {
+    "name": "dva",
+    "role": "bruiser",
+    "player_spawned_name": "HeroDVaPilot"
+  },
+  "etc": {
+    "name": "etc",
+    "role": "tank",
+    "player_spawned_name": "HeroL90ETC"
+  },
+  "falstad": {
+    "name": "falstad",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroFalstad"
+  },
+  "fenix": {
+    "name": "fenix",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroFenix"
+  },
+  "gall": {
+    "name": "gall",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroGall"
+  },
+  "garrosh": {
+    "name": "garrosh",
+    "role": "tank",
+    "player_spawned_name": "HeroGarrosh"
+  },
+  "gazlowe": {
+    "name": "gazlowe",
+    "role": "bruiser",
+    "player_spawned_name": "HeroTinker"
+  },
+  "genji": {
+    "name": "genji",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroGenji"
+  },
+  "greymane": {
+    "name": "greymane",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroGreymane"
+  },
+  "guldan": {
+    "name": "guldan",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroGuldan"
+  },
+  "hanzo": {
+    "name": "hanzo",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroHanzo"
+  },
+  "hogger": {
+    "name": "hogger",
+    "role": "bruiser",
+    "player_spawned_name": "HeroHogger"
+  },
+  "illidan": {
+    "name": "illidan",
+    "role": "melee-assassin",
+    "player_spawned_name": "HeroIllidan"
+  },
+  "imperius": {
+    "name": "imperius",
+    "role": "bruiser",
+    "player_spawned_name": "HeroImperius"
+  },
+  "jaina": {
+    "name": "jaina",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroJaina"
+  },
+  "johanna": {
+    "name": "johanna",
+    "role": "tank",
+    "player_spawned_name": "HeroCrusader"
+  },
+  "junkrat": {
+    "name": "junkrat",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroJunkrat"
+  },
+  "kaelthas": {
+    "name": "kaelthas",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroKaelthas"
+  },
+  "kelthuzad": {
+    "name": "kelthuzad",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroKelThuzad"
+  },
+  "kerrigan": {
+    "name": "kerrigan",
+    "role": "melee-assassin",
+    "player_spawned_name": "HeroKerrigan"
+  },
+  "kharazim": {
+    "name": "kharazim",
+    "role": "healer",
+    "player_spawned_name": "HeroMonk"
+  },
+  "leoric": {
+    "name": "leoric",
+    "role": "bruiser",
+    "player_spawned_name": "HeroLeoric"
+  },
+  "lili": {
+    "name": "li-li",
+    "role": "healer",
+    "player_spawned_name": "HeroLiLi"
+  },
+  "liming": {
+    "name": "li-ming",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroWizard"
+  },
+  "ltmorales": {
+    "name": "lt-morales",
+    "role": "healer",
+    "player_spawned_name": "HeroMedic"
+  },
+  "lucio": {
+    "name": "lucio",
+    "role": "healer",
+    "player_spawned_name": "HeroLucio"
+  },
+  "lunara": {
+    "name": "lunara",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroDryad"
+  },
+  "maiev": {
+    "name": "maiev",
+    "role": "melee-assassin",
+    "player_spawned_name": "HeroMaiev"
+  },
+  "malfurion": {
+    "name": "malfurion",
+    "role": "healer",
+    "player_spawned_name": "HeroMalfurion"
+  },
+  "malganis": {
+    "name": "malganis",
+    "role": "tank",
+    "player_spawned_name": "HeroMalGanis"
+  },
+  "malthael": {
+    "name": "malthael",
+    "role": "bruiser",
+    "player_spawned_name": "HeroMalthael"
+  },
+  "medivh": {
+    "name": "medivh",
+    "role": "support",
+    "player_spawned_name": "HeroMedivh"
+  },
+  "mei": {
+    "name": "mei",
+    "role": "tank",
+    "player_spawned_name": "HeroMeiOW"
+  },
+  "mephisto": {
+    "name": "mephisto",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroMephisto"
+  },
+  "muradin": {
+    "name": "muradin",
+    "role": "tank",
+    "player_spawned_name": "HeroMuradin"
+  },
+  "murky": {
+    "name": "murky",
+    "role": "melee-assassin",
+    "player_spawned_name": "HeroMurky"
+  },
+  "nazeebo": {
+    "name": "nazeebo",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroWitchDoctor"
+  },
+  "nova": {
+    "name": "nova",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroNova"
+  },
+  "orphea": {
+    "name": "orphea",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroOrphea"
+  },
+  "probius": {
+    "name": "probius",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroProbius"
+  },
+  "qhira": {
+    "name": "qhira",
+    "role": "melee-assassin",
+    "player_spawned_name": "HeroNexusHunter"
+  },
+  "ragnaros": {
+    "name": "ragnaros",
+    "role": "bruiser",
+    "player_spawned_name": "HeroRagnaros"
+  },
+  "raynor": {
+    "name": "raynor",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroRaynor"
+  },
+  "rehgar": {
+    "name": "rehgar",
+    "role": "healer",
+    "player_spawned_name": "HeroRehgar"
+  },
+  "rexxar": {
+    "name": "rexxar",
+    "role": "bruiser",
+    "player_spawned_name": "HeroRexxar"
+  },
+  "samuro": {
+    "name": "samuro",
+    "role": "melee-assassin",
+    "player_spawned_name": "HeroSamuro"
+  },
+  "sgthammer": {
+    "name": "sgt-hammer",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroSgtHammer"
+  },
+  "sonya": {
+    "name": "sonya",
+    "role": "bruiser",
+    "player_spawned_name": "HeroBarbarian"
+  },
+  "stitches": {
+    "name": "stitches",
+    "role": "tank",
+    "player_spawned_name": "HeroStitches"
+  },
+  "stukov": {
+    "name": "stukov",
+    "role": "healer",
+    "player_spawned_name": "HeroStukov"
+  },
+  "sylvanas": {
+    "name": "sylvanas",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroSylvanas"
+  },
+  "tassadar": {
+    "name": "tassadar",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroTassadar"
+  },
+  "thebutcher": {
+    "name": "the-butcher",
+    "role": "melee-assassin",
+    "player_spawned_name": "HeroButcher"
+  },
+  "thelostvikings": {
+    "name": "the-lost-vikings",
+    "role": "support",
+    "player_spawned_name": "HeroLostVikingsController"
+  },
+  "thrall": {
+    "name": "thrall",
+    "role": "bruiser",
+    "player_spawned_name": "HeroThrall"
+  },
+  "tracer": {
+    "name": "tracer",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroTracer"
+  },
+  "tychus": {
+    "name": "tychus",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroTychus"
+  },
+  "tyrael": {
+    "name": "tyrael",
+    "role": "tank",
+    "player_spawned_name": "HeroTyrael"
+  },
+  "tyrande": {
+    "name": "tyrande",
+    "role": "healer",
+    "player_spawned_name": "HeroTyrande"
+  },
+  "uther": {
+    "name": "uther",
+    "role": "healer",
+    "player_spawned_name": "HeroUther"
+  },
+  "valeera": {
+    "name": "valeera",
+    "role": "melee-assassin",
+    "player_spawned_name": "HeroValeera"
+  },
+  "valla": {
+    "name": "valla",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroDemonHunter"
+  },
+  "varian": {
+    "name": "varian",
+    "role": "bruiser",
+    "player_spawned_name": "HeroVarian"
+  },
+  "whitemane": {
+    "name": "whitemane",
+    "role": "healer",
+    "player_spawned_name": "HeroWhitemane"
+  },
+  "xul": {
+    "name": "xul",
+    "role": "bruiser",
+    "player_spawned_name": "HeroNecromancer"
+  },
+  "yrel": {
+    "name": "yrel",
+    "role": "bruiser",
+    "player_spawned_name": "HeroYrel"
+  },
+  "zagara": {
+    "name": "zagara",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroZagara"
+  },
+  "zarya": {
+    "name": "zarya",
+    "role": "support",
+    "player_spawned_name": "HeroZarya"
+  },
+  "zeratul": {
+    "name": "zeratul",
+    "role": "melee-assassin",
+    "player_spawned_name": "HeroZeratul"
+  },
+  "zuljin": {
+    "name": "zuljin",
+    "role": "ranged-assassin",
+    "player_spawned_name": "HeroZuljin"
+  }
+}
