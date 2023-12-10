@@ -17,12 +17,38 @@ from app.heroes import HEROES_DICT
 _mapper_registry = registry()
 
 
-_COLUMN_POSTFIX = "_banned"
-"""Prefix for ban columns."""
-
-
 def generate_uuid():
     return str(uuid4())
+
+
+class MatchSeries:
+    """
+    Class representing a match series.
+
+    This class also has an attribute "{hero_name}_banned" for every hero in the game.
+    """
+
+    _COLUMN_POSTFIX = "_banned"
+    id: str
+    created_at: datetime.datetime
+    name: str
+    edit_key: str
+    """Key required for editing this series."""
+
+    def _ban(self, hero: str):
+        self.__setattr__(hero + self._COLUMN_POSTFIX, True)
+
+    def _unban(self, hero: str):
+        self.__setattr__(hero + self._COLUMN_POSTFIX, False)
+
+    @property
+    def banned_heroes(self):
+        """
+        Generator for banned heroes in this series.
+        """
+        for hero in HEROES_DICT:
+            if self.__getattribute__(hero + self._COLUMN_POSTFIX):
+                yield hero
 
 
 match_series_table = Table(
@@ -33,34 +59,11 @@ match_series_table = Table(
     Column("name", Text),
     Column("edit_key", Uuid(as_uuid=False), default=generate_uuid),
     *(
-        Column(hero_name + _COLUMN_POSTFIX, Boolean, default=False)
+        Column(hero_name + MatchSeries._COLUMN_POSTFIX, Boolean, default=False)
         for hero_name in sorted(HEROES_DICT)
     ),
 )
 """SQLAlchemy table for MatchSeries class."""
-
-
-class MatchSeries:
-    """
-    Class representing a match series.
-
-    This class also has an attribute "{hero_name}_banned" for every hero in the game.
-    """
-
-    id: str
-    created_at: datetime.datetime
-    name: str
-    edit_key: str
-    """Key required for editing this series."""
-
-    @property
-    def banned_heroes(self):
-        """
-        Generator for banned heroes in this series.
-        """
-        for hero in HEROES_DICT:
-            if self.__getattribute__(hero + _COLUMN_POSTFIX):
-                yield hero
 
 
 _mapper_registry.map_imperatively(MatchSeries, match_series_table)
@@ -79,7 +82,7 @@ class MatchSeriesManager:
     def __init__(self, session: Session, id: str, edit_key: Optional[str] = None):
         self.session = session
         stmt = select(MatchSeries).where(MatchSeries.id == id)
-        self.match_series = self.session.scalars(stmt).one()
+        self.match_series: MatchSeries = self.session.scalars(stmt).one()
         """A MatchSeries instance for the ID."""
         if edit_key is not None:
             self.edit_permission = self.match_series.edit_key == edit_key
@@ -97,9 +100,9 @@ class MatchSeriesManager:
             raise RuntimeError("Insufficient permissions to edit match series.")
 
         for hero in ban_heroes:
-            self.match_series.__setattr__(hero + _COLUMN_POSTFIX, True)
+            self.match_series._ban(hero)
         for hero in unban_heroes:
-            self.match_series.__setattr__(hero + _COLUMN_POSTFIX, False)
+            self.match_series._unban(hero)
         self.session.commit()
 
     @staticmethod
@@ -116,7 +119,7 @@ class MatchSeriesManager:
             name=name,
         )
         for hero in pre_banned_heroes:
-            match_series.__setattr__(hero + _COLUMN_POSTFIX, True)
+            match_series._ban(hero)
         session.add(match_series)
         session.commit()
         return match_series
