@@ -28,7 +28,9 @@ def get_replay_details(replay):
         return replay_details
 
 
-@pytest.mark.parametrize("replay", list(map(str, REPLAY_DIR.iterdir())))
+@pytest.mark.parametrize(
+    "replay", list(map(str, REPLAY_DIR.iterdir())) if REPLAY_DIR.exists() else []
+)
 class TestReplayExtractorFunctions:
     def test_heroes_extraction_from_details(self, replay):
         with get_archive_protocol(replay) as (archive, protocol):

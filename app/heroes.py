@@ -27,7 +27,7 @@ PLAYER_SPAWNED_NAMES_MAP: Dict[str, str] = {
 }
 "Reverse mapping from PlayerSpawned values to hero names."
 
-HERO_ROLES: set[str] = set([hero["role"] for hero in HEROES_DICT.values()])
+HERO_ROLES: set[str] = {hero["role"] for hero in HEROES_DICT.values()}
 """A set of all the hero roles found in the config file."""
 
 pattern = re.compile(r"[^a-z]+")
