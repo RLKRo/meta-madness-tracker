@@ -37,7 +37,10 @@ def clean_hero_name(name: str):
     """
     Standardize hero names (lower case + remove any non-letter characters).
     """
-    return re.sub(pattern, "", name.lower())
+    clean_name = re.sub(pattern, "", name.lower())
+    if clean_name == "lcio":  # patch u with an accent
+        return "lucio"
+    return clean_name
 
 
 def extract_heroes_from_details(archive: mpyq.MPQArchive, protocol, filter_names=True):
@@ -56,8 +59,6 @@ def extract_heroes_from_details(archive: mpyq.MPQArchive, protocol, filter_names
     for player in details["m_playerList"]:
         if "m_hero" in player:
             hero_name = clean_hero_name(player["m_hero"].decode())
-            if hero_name == "lcio":  # patch naming error in replays
-                hero_name = "lucio"
             if not filter_names or hero_name in HEROES_DICT:
                 heroes.append(hero_name)
     return heroes
