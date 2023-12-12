@@ -106,3 +106,21 @@ def test_bans_unbans(pre_bans, session, match_series_list):
 
     manager.set_hero_bans(["deathwing"], ["deathwing"])
     assert set(manager.match_series.banned_heroes) == {"anduin"}
+
+
+def test_cho_gall(pre_bans, session, match_series_list):
+    manager = MatchSeriesManager(
+        session, match_series_list[2].id, match_series_list[2].edit_key
+    )
+
+    manager.set_hero_bans(["cho"], [])
+    assert set(manager.match_series.banned_heroes) == {"deathwing", "brightwing", "cho", "gall"}
+
+    manager.set_hero_bans(["blaze"], ["gall"])
+    assert set(manager.match_series.banned_heroes) == {"deathwing", "brightwing", "blaze"}
+
+    manager.set_hero_bans(["cho", "gall"], [])
+    assert set(manager.match_series.banned_heroes) == {"deathwing", "brightwing", "cho", "gall", "blaze"}
+
+    manager.set_hero_bans(["anduin"], ["cho", "gall"])
+    assert set(manager.match_series.banned_heroes) == {"deathwing", "brightwing", "blaze", "anduin"}

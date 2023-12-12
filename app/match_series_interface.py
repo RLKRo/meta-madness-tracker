@@ -29,17 +29,25 @@ class MatchSeries:
     """
 
     _COLUMN_POSTFIX = "_banned"
+    _CHO_GALL = ("cho", "gall")
     id: str
     created_at: datetime.datetime
     name: str
     edit_key: str
     """Key required for editing this series."""
 
+    def _set_status(self, hero, status: bool):
+        if hero in self._CHO_GALL:
+            for half in self._CHO_GALL:
+                self.__setattr__(half + self._COLUMN_POSTFIX, status)
+        else:
+            self.__setattr__(hero + self._COLUMN_POSTFIX, status)
+
     def _ban(self, hero: str):
-        self.__setattr__(hero + self._COLUMN_POSTFIX, True)
+        self._set_status(hero, True)
 
     def _unban(self, hero: str):
-        self.__setattr__(hero + self._COLUMN_POSTFIX, False)
+        self._set_status(hero, False)
 
     @property
     def banned_heroes(self):
