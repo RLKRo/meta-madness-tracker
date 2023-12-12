@@ -6,3 +6,4 @@ from app.heroes import (
     extract_heroes_from_replay,
 )
 from app.match_series_interface import MatchSeriesManager
+from app.common import align_headers, db_connection

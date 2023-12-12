@@ -33,7 +33,7 @@ HERO_ROLES: set[str] = {hero["role"] for hero in HEROES_DICT.values()}
 pattern = re.compile(r"[^a-z]+")
 
 
-def clean_hero_name(name: str):
+def clean_hero_name(name: str) -> str:
     """
     Standardize hero names (lower case + remove any non-letter characters).
     """
@@ -43,7 +43,9 @@ def clean_hero_name(name: str):
     return clean_name.removeprefix("the")
 
 
-def extract_heroes_from_details(archive: mpyq.MPQArchive, protocol, filter_names=True):
+def extract_heroes_from_details(
+    archive: mpyq.MPQArchive, protocol, filter_names=True
+) -> list[str]:
     """
     Extract hero list from replay details. The set only contains names included in `HEROES_DICT`.
 
@@ -66,7 +68,7 @@ def extract_heroes_from_details(archive: mpyq.MPQArchive, protocol, filter_names
 
 def extract_heroes_from_tracker_events(
     archive: mpyq.MPQArchive, protocol, filter_names=True
-):
+) -> list[str]:
     """
     A fallback for extracting hero list.
     Extracts data from tracker events which is slower but works for replays in any language.
@@ -121,12 +123,12 @@ def get_archive_protocol(replay):
         yield archive, protocol
 
 
-def extract_heroes_from_replay(replay):
+def extract_heroes_from_replay(replay) -> str | list[str]:
     """
     Extract heroes from a `.StormReplay` file.
 
     :param replay: Either a file path or an object with a `read` method.
-    :return: Set of heroes that are played in the replay OR an error message if extraction was unsuccessful.
+    :return: List of heroes that are played in the replay OR an error message if extraction was unsuccessful.
     """
     unsuccessful_extraction_message = (
         "Could not extract heroes from replay. "

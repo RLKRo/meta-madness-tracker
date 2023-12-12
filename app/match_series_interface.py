@@ -54,9 +54,11 @@ class MatchSeries:
         """
         Generator for banned heroes in this series.
         """
+        banned_heroes = set()
         for hero in HEROES_DICT:
             if self.__getattribute__(hero + self._COLUMN_POSTFIX):
-                yield hero
+                banned_heroes.add(hero)
+        return banned_heroes
 
 
 match_series_table = Table(
@@ -111,10 +113,13 @@ class MatchSeriesManager:
             self.match_series._ban(hero)
         for hero in unban_heroes:
             self.match_series._unban(hero)
+        self.session.add(self.match_series)
         self.session.commit()
 
     @staticmethod
-    def create_new(session: Session, name: str, pre_banned_heroes: Iterable[str]):
+    def create_new(
+        session: Session, name: str, pre_banned_heroes: Iterable[str]
+    ) -> MatchSeries:
         """
         Create new MatchSeries.
 
