@@ -40,7 +40,7 @@ def clean_hero_name(name: str):
     clean_name = re.sub(pattern, "", name.lower())
     if clean_name == "lcio":  # patch u with an accent
         return "lucio"
-    return clean_name
+    return clean_name.removeprefix("the")
 
 
 def extract_heroes_from_details(archive: mpyq.MPQArchive, protocol, filter_names=True):

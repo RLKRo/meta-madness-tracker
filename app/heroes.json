@@ -359,12 +359,12 @@
     "role": "ranged-assassin",
     "player_spawned_name": "HeroTassadar"
   },
-  "thebutcher": {
+  "butcher": {
     "name": "the-butcher",
     "role": "melee-assassin",
     "player_spawned_name": "HeroButcher"
   },
-  "thelostvikings": {
+  "lostvikings": {
     "name": "the-lost-vikings",
     "role": "support",
     "player_spawned_name": "HeroLostVikingsController"
