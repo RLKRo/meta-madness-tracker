@@ -94,12 +94,13 @@ if submit:
             )
 
             st.markdown(
-                f"[Edit Link](/View_Match_Series?id={match_series.id}&edit_key={match_series.edit_key})"
+                f"[Link with Edit permissions](/View_Match_Series?id={match_series.id}"
+                f"&edit_key={match_series.edit_key})"
                 f" &mdash; this link allows to view and edit bans."
             )
 
             st.markdown(
-                f"[View Link](/View_Match_Series?id={match_series.id})"
+                f"[Link with View permissions](/View_Match_Series?id={match_series.id})"
                 f" &mdash; this link allows to view bans."
             )
     elif isinstance(match_series_data, str):
